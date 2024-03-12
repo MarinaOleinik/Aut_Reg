@@ -30,6 +30,7 @@ while True:
 
     elif vastus==5:
         print("Lõpetamine")
+
         break
     else:
         print("Tundmatu valik")

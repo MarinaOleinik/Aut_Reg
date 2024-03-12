@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>bc6d141b-c738-470e-a7c1-4f2bc6e64aee</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Aut_Reg.py</StartupFile>
+    <StartupFile>Too_failidega.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,8 +26,9 @@
     <Compile Include="Too_failidega.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Päevad.txt" />
-    <Content Include="Tekst.txt" />
+    <Content Include="Ankeet.txt" />
+    <Content Include="Kasutajad.txt" />
+    <Content Include="Salasõnad.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
