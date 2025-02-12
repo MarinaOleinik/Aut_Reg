@@ -5,11 +5,14 @@ kasutajanimed=loe_failist("Kasutajad.txt")
 while True:
     print(kasutajanimed)
     print(salasõnad)
+    
+    #räägimine("Tee oma valik", "et")
     print("1-registreerimine\n2-autoriseerimine\n3-nime või parooli muutmine\n4-unustanud parooli taastamine\n5-lõpetamine\n")
     vastus=int(input("Sisestage arv"))
     if vastus==1:
         print("Registreerimine")
         kasutajanimed,salasõnad=registreerimine(kasutajanimed,salasõnad)
+        saada_kiri()
     elif vastus==2:
         print("Autoriseerimine")
         autoriseerimine(kasutajanimed,salasõnad)
@@ -30,7 +33,6 @@ while True:
 
     elif vastus==5:
         print("Lõpetamine")
-
         break
     else:
         print("Tundmatu valik")
