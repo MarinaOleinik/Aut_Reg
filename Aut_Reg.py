@@ -1,5 +1,5 @@
 from MinuOmaMoodul import *
-
+#C:/Users/marina.oleinik/source/repos/Aut_Reg/Salasõnad.txt
 salasõnad=loe_failist("Salasõnad.txt")
 kasutajanimed=loe_failist("Kasutajad.txt")
 while True:

@@ -1,6 +1,7 @@
 from string import *
 from time import sleep
 from os import path, remove
+from tkinter import simpledialog as sd
 def registreerimine(kasutajad:list,paroolid:list)->any:
     """Kirjeldus
     :param list kasutajad: Kirjeldus
@@ -36,6 +37,8 @@ def registreerimine(kasutajad:list,paroolid:list)->any:
             break
         else:
             print("Selline kasutaja on juba olemas!")
+    mail=sd.askstring("Kirjuta oma e-posti!","Kuhu saada kirja?")
+    email(mail)
     return kasutajad, paroolid
 def autoriseerimine(kasutajad:list,paroolid:list):
     """Funktsioon kuvab ekraanile "Tere tulemast!" kui kasutaja on olemas nimekirjas
