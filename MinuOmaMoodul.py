@@ -1,7 +1,8 @@
 from string import *
 from time import sleep
-from os import path, remove
+from os import path, remove, system
 from tkinter import simpledialog as sd
+from gtts import *
 def registreerimine(kasutajad:list,paroolid:list)->any:
     """Kirjeldus
     :param list kasutajad: Kirjeldus
@@ -31,8 +32,11 @@ def registreerimine(kasutajad:list,paroolid:list)->any:
                     if flag_p and flag_u and flag_l and flag_d:
                         kasutajad.append(nimi)
                         paroolid.append(parool)
+                        räägimine("Sinu kasutajanimi on "+nimi,"et")
+                        räägimine("Sinu salasõna on "+parool,"et")
                     break
                 else:
+                    räägimine("Nõrk salasõna!","et")
                     print("Nõrk salasõna!")
             break
         else:
@@ -40,6 +44,9 @@ def registreerimine(kasutajad:list,paroolid:list)->any:
     #mail=sd.askstring("Kirjuta oma e-posti!","Kuhu saada kirja?")
     #email(mail)
     return kasutajad, paroolid
+def räägimine(tekst:str,keel:str):
+    obj=gTTS(text=tekst,lang=keel,slow=False).save("heli.mp3")
+    system("heli.mp3")
 def autoriseerimine(kasutajad:list,paroolid:list):
     """Funktsioon kuvab ekraanile "Tere tulemast!" kui kasutaja on olemas nimekirjas
         Nimi on järjendis kasutajad
